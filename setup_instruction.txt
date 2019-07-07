@@ -6,8 +6,8 @@ Initialize a repository:
 expo init AwesomeProject
 cd AwesomeProject
 
-Install react native chatbot library: https://github.com/LucasBassetti/react-native-chatbot
-npm install react-native-chatbot --save
+Install react native chat UI library: https://github.com/FaridSafi/react-native-gifted-chat
+npm install react-native-gifted-chat --save
 
 Run the app:
 npm start
