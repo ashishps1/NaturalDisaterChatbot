@@ -1,0 +1,15 @@
+Install node js: https://nodejs.org/en/download/
+
+Install expo cli: npm install -g expo-cli
+
+Initialize a repository:
+expo init AwesomeProject
+cd AwesomeProject
+
+Install react native chatbot library: https://github.com/LucasBassetti/react-native-chatbot
+npm install react-native-chatbot --save
+
+Run the app:
+npm start
+
+To run the app on your phone, install expo app and then scan the QR code which appears on the broswer after running npm start.
