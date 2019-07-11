@@ -7,6 +7,8 @@ import {
 
 import { TabView, SceneMap } from 'react-native-tab-view';
 import ChatBot from './Components/Chatbot/ChatBot';
+import Register from './Components/Register/Register';
+import Connect from './Components/Connect/Connect';
 import { Constants } from 'expo';
 
 const ChatBotRoute = () => (
@@ -14,11 +16,11 @@ const ChatBotRoute = () => (
 );
 
 const RegisterRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
+  <Register />
 );
 
 const ConnectRoute = () => (
-  <View style={[styles.scene, { backgroundColor: '#673ab7' }]} />
+  <Connect />
 );
 
 const BlogRoute = () => (
@@ -32,7 +34,6 @@ export default class App extends Component {
       { key: 'first', title: 'Chatbot' },
       { key: 'second', title: 'Register' },
       { key: 'third', title: 'Connect' },
-      { key: 'fourth', title: 'Blogs' },      
     ],
   };
 
@@ -44,7 +45,6 @@ export default class App extends Component {
           first: ChatBotRoute,
           second: RegisterRoute,
           third: ConnectRoute,
-          fourth: BlogRoute
         })}
         onIndexChange={index => this.setState({ index })}
         initialLayout={{ width: Dimensions.get('window').width }}
