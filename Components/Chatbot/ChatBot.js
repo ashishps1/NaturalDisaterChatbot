@@ -9,7 +9,7 @@ import {
 import { GiftedChat } from 'react-native-gifted-chat';
 import { Dialogflow_V2 } from 'react-native-dialogflow';
 
-import { dialogflowConfig } from '../../env';
+//import { dialogflowConfig } from '../../env';
 import Expo from 'expo';
 
 let window = Dimensions.get('window');
@@ -35,12 +35,12 @@ export default class ChatBot extends Component {
     componentDidMount () {
       this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
       this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
-      Dialogflow_V2.setConfiguration(
+      /*Dialogflow_V2.setConfiguration(
         dialogflowConfig.client_email,
         dialogflowConfig.private_key,
         Dialogflow_V2.LANG_ENGLISH_US,
         dialogflowConfig.project_id
-      );    
+      );*/    
     }
   
     componentWillUnmount () {
