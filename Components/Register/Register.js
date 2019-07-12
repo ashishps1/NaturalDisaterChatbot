@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 import {
-    View
+    StyleSheet, Text, View
 } from 'react-native';
 
 import { Input, Button, CheckBox } from 'react-native-elements';
@@ -25,7 +26,7 @@ export default class Register extends Component {
                 />       
                 <Button
                     title="Locate Me"
-                />       
+                />     
                 <CheckBox
                     title='Shelter'
                     checked={false}

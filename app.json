@@ -25,6 +25,12 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android":{
+      "package":"com.naturaldisaster.chatbot",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyAtjRq_whnMqjKqnch9t8d5Jxk1Mc38J7Y" }   
+     }
     }
   }
 }
