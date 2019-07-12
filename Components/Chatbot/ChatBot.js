@@ -110,7 +110,7 @@ export default class ChatBot extends Component {
           <GiftedChat
             textInputProps={{autoFocus: true}}
             messages={this.state.messages}
-            placeholder='Ask me anything...'
+            placeholder='Write a message...'
             onSend={messages => this.onSend(messages)}
             user={{
               _id: 1,

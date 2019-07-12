@@ -5,7 +5,14 @@ import {
   Dimensions,
 } from 'react-native';
 
-import { TabView, SceneMap } from 'react-native-tab-view';
+import {
+  TabView,
+  TabBar,
+  SceneMap,
+  NavigationState,
+  SceneRendererProps,
+} from 'react-native-tab-view';
+
 import ChatBot from './Components/Chatbot/ChatBot';
 import Register from './Components/Register/Register';
 import Connect from './Components/Connect/Connect';
@@ -47,7 +54,7 @@ export default class App extends Component {
           third: ConnectRoute,
         })}
         onIndexChange={index => this.setState({ index })}
-        initialLayout={{ width: Dimensions.get('window').width }}
+        initialLayout={{ width: Dimensions.get('window').width, marginTop: '10px' }}
       />
     );
   }
@@ -65,5 +72,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 10,
+  },  
+  tabBar: {
+    flexDirection: 'row',
+    paddingTop: Constants.statusBarHeight
+  },
+  tab: {
+    width: 120,
+  },
+  indicator: {
+    backgroundColor: '#ffeb3b',
+  },
+  label: {
+    fontWeight: '400',
   },  
 });
