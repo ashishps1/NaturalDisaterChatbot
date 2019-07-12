@@ -19,7 +19,7 @@ export default class Register extends Component {
                     placeholder='Name'
                 />
                 <Input
-                    placeholder='Contact'
+                    placeholder='Contact Number'
                 />                
                 <Input
                     placeholder='Address'
@@ -29,16 +29,19 @@ export default class Register extends Component {
                 />     
                 <CheckBox
                     title='Shelter'
-                    checked={true}
+                    checked={false}
                 />
                 <CheckBox
                     title='Food'
-                    checked={true}
+                    checked={false}
                 />
                 <CheckBox
                     title='Clothes'
-                    checked={true}
-                />                                  
+                    checked={false}
+                />  
+                <Button
+                    title='Submit'
+                />                               
             </View>
         )
     }

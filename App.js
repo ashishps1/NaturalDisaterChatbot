@@ -3,6 +3,7 @@ import {
   View,
   StyleSheet,
   Dimensions,
+  TouchableOpacity
 } from 'react-native';
 
 import {
@@ -16,7 +17,8 @@ import {
 import ChatBot from './Components/Chatbot/ChatBot';
 import Register from './Components/Register/Register';
 import Connect from './Components/Connect/Connect';
-import { Constants } from 'expo';
+import { Constants} from 'expo';
+import { Icon } from 'react-native-elements'
 
 const ChatBotRoute = () => (
   <ChatBot />
@@ -46,6 +48,10 @@ export default class App extends Component {
 
   render() {
     return (
+      <React.Fragment>
+      <Icon
+        name='rowing' 
+      />
       <TabView
         navigationState={this.state}
         renderScene={SceneMap({
@@ -54,13 +60,18 @@ export default class App extends Component {
           third: ConnectRoute,
         })}
         onIndexChange={index => this.setState({ index })}
-        initialLayout={{ width: Dimensions.get('window').width, marginTop: '10px' }}
+        initialLayout={{ width: Dimensions.get('window').width}}
+        style= {styles.container}
       />
+      </React.Fragment>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    marginTop: 30
+  },
   scene: {
     flex: 1,
   },
